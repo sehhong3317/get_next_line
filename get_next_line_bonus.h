@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 17:57:03 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/24 12:40:53 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/24 13:39:57 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX  10
+#  define OPEN_MAX  1024
 # endif
 
 int		get_next_line(int fd, char **line);
