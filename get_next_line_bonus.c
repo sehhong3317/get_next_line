@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 14:20:07 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/23 20:42:25 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/25 14:58:16 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,15 @@ int				get_next_line(int fd, char **line)
 
 	if (fd < 0 || fd > OPEN_MAX || BUFFER_SIZE <= 0 || line == NULL)
 		return (-1);
-	while ((read_num = read(fd, buff, BUFFER_SIZE)))
+	while ((read_num = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
 		buff[read_num] = '\0';
 		left[fd] = ft_strjoin(left[fd], buff);
 		if (ft_strchr(left[fd], '\n'))
 			return (line_assigner(nl_locater(left[fd]), &left[fd], line));
 	}
+	if (read_num < 0)
+		return (-1);
 	if (ft_strchr(left[fd], '\n'))
 		return (line_assigner(nl_locater(left[fd]), &left[fd], line));
 	if (left[fd] == NULL)
