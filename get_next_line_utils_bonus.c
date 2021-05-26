@@ -6,11 +6,11 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 14:14:15 by sehhong           #+#    #+#             */
-/*   Updated: 2021/05/25 10:23:02 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/05/26 14:21:59 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char		*ft_strchr(const char *s, int c)
 {
